@@ -24,6 +24,10 @@ class GithubEmojiCompletions(sublime_plugin.EventListener):
             return settings.get("emojiCompletions"      )
         if ch == '@': # emoji completions for commit messages
             return settings.get("commitEmojiCompletions")
+        if ch == '|': # emoji completions that only insert emojis
+            return settings.get("emojiCompletionsSym"      )
+        if ch == '!': # emoji completions for commit messages that only insert emojis
+            return settings.get("commitEmojiCompletionsSym")
         return []
 
 class GithubEmojiAutoCompleteCommand(sublime_plugin.TextCommand):
