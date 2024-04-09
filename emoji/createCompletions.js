@@ -26,24 +26,17 @@ function getSublimeCompletions() {
       ]);
     });
   });
-
   return completions;
 }
 
-function stringOrEmpty(s) {
-  return s ? s.toString() : '';
-}
-
+function stringOrEmpty(s) {return s ? s.toString() : '';}
 function append(suffix, s) {
-  s = s || '';
+  s      = s      || '';
   suffix = suffix || '';
-
   return s ? s.toString() + suffix : '';
 }
-
 function prepend(prefix, s) {
-  s = s || '';
+  s      = s      || '';
   prefix = prefix || '';
-
   return s ? prefix + s.toString() : '';
 }
